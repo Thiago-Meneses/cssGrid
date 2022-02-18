@@ -6,7 +6,8 @@
         <title>CSS Grid Layout Module</title>
 
         <!-- myStyles -->
-        <link rel="stylesheet" type="text/css" href="https://thiago-meneses.github.io/styles.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="https://thiago-meneses.github.io/spacing.css">
 
         <!-- FONTS -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,248 +15,258 @@
         <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Nunito:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="container-grid">
-            <div class='frontPage'>
-                <div class='textt'>
-                    <h1 class='initialTitle'>CSS Grid</h1>
-                </div>
-            </div>
-            <div class='container-main'>
-                <main class='mainClass px-md-2'>
-                    <p>In this post we are going learn about the <span class='gold'>CSS Grid Layout Module</span> – also called <span class='gold'>CSS Grid</span></p>
-                    <p>The CSS Grid:</p>
-                    <ul>
-                        <li>Is a Layout System, evidently one that is grid-based</li>
-                        <li>It has rows and columns</li>
-                        <li>Makes it easir to design pages without the use of floats and positioning</li>
-                    </ul>
-
-                    <!-- GRID ELEMENTS -->
-                    <div class='bd-content'>
-                        <h1 id="gridElements" class='headline'><span class='backdrop'>Grid Elements</span></h1>
-                        <div class='px-md-4 px-1'>
-                            <p>The Grid is made up of <b>2 elements</b>:</p>
-                            <ul class="px-3">
-                                <li class="my-2">The <span class='gold'>Parent Element</span></li>
-                                <li class="my-2">The <span class='gold'>Child Elements</span> , made up of one or multiple elements</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- GRID COLUMNS -->
-                    <div class='bd-content'>
-                        <h1 id="gridColumns" class='headline'><span class='backdrop'>Grid <span class='gold'>Columns</span></span></h1>
-                        <div class='px-md-4 px-1'>
-                            <p class="my-2">Columns represent the <b>Vertical Lines</b> of the grid items</p>
-                            <img src="img/gridColumns.jpg" alt="Grid Columns" class="centeredImage img60 br-25">
-                        </div>
-                    </div>
-                    <!-- GRID ROWS -->
-                    <div class='bd-content'>
-                        <h1 id="gridRows" class='headline'><span class='backdrop'>Grid <span class='gold'>Rows</span></span></h1>
-                        <div class='px-md-4'>
-                            <p class="my-2">Rows represent the <b>Horizontal Lines</b> of the grid items</p>
-                            <img src="img/gridRows.jpg" alt="Grid Rows" class="centeredImage img60 br-25">
-                        </div>
-                    </div>
-                    
-                    <!-- GRID PROPERTIES -->
-                    <div class='bd-content'>
-                        <h1 id='gridProperties' class='headline'><span class='backdrop'>Grid <span class='gold'>Properties</span></span></h1>
-                        <div class='contentPadding'>
+        <div class="bd-container">
+            <aside>
+                <div class="sidebar-container">
+                    <details class="navbar mt-5">
+                        <summary>Chapters</summary>
+                        <ul class="navbar-ul noBullet px-3">
+                            <li><a href="#gridElements">Grid Elements</a></li>
+                            <li><a href="#gridColumns">Grid Columns</a></li>
+                            <li><a href="#gridRows">Grid Rows</a></li>
+                            <li><a href="#gridProperties">Grid Properties</a></li>
+                            <li><a href="#gridGaps">Grid Gaps</a></li>
+                            <li><a href="#gridLines">Grid Lines</a></li>
+                            <li><a href="#flexVSgrid">Flex vs CSS</a></li>
+                            <li><a href="#webpageTemplate">Webpage Template</a></li>
+                        </ul>
+                    </details>
+                </div>    
+            </aside>
+            <main class='main-container'>
+                <div class="main-content">
+                    <header class="content-header">
+                        <h1>CSS Grid</h1>
+                    </header>
+                    <div class="content">
+                        <p>In this post we are going learn about the <span class='red-cream'>CSS Grid Layout Module</span> – also called <span class='red-cream'>CSS Grid</span></p>
+                        <p>The CSS Grid:</p>
+                        <ul>
+                            <li>Is a Layout System, evidently one that is grid-based</li>
+                            <li>It has rows and columns</li>
+                            <li>Makes it easir to design pages without the use of floats and positioning</li>
+                        </ul>
+                        <!-- GRID ELEMENTS -->
+                        <div class='borderline'>
+                            <h1 class='headline' id="gridElements"><span class="backdrop">Grid <span class="red-cream">Elements</span></span></h1>
                             <div class='chapter'>
-                                <h2 class='chapter-title'><span class='backdrop'><span class='fw-100'>The</span> Essential <span class='fw-100'>Properties</span></span></h2>
-                                <div class=''>
-                                    <div class='subchapter'>
-                                        <h3 class='subchapter-title'><code class='inlineCode'>display</code></h3>
-                                        <div class='px-md-3'>
-                                            <p class="my-2">This property is extremely important</p>
-                                            <p class="my-2">It is responsible for <b>turning an HTML element</b> into a <span class='gold'>Grid Container</span></p>
-                                            <p class="my-2">When dealing with <b>CSS Grid</b>, we can use either:</p>
-                                            <ul class="pl-3">
-                                                <li class="my-1"><code class='inlineCode'>display: grid</code> or</li>
-                                                <li class="my-1"><code class='inlineCode'>display: inline-grid</code></li>
-                                                <!-- use examples -->
-                                            </ul>
-                                            <p class="my-2">All <b>direct children</b> of the grid container automatically become <span class='gold'>Grid Items</span>.</p>
-                                        </div>
-                                    </div>
-                                    <div class='subchapter'>
-                                        <h3 class='subchapter-title'><code class='inlineCode'>grid-template-columns</code></h3>
-                                        <div class='px-md-4'>
-                                            <p class="mt-2">This property is used to define:</p>
-                                            <ul class="pl-3 mb-1">
-                                                <li>The <b>number of columns</b></li>
-                                                <li>The <b>width</b> of each column</li>
-                                            </ul>
-                                            <div class="exContainer-headline">
-                                                <p><b>1. Example</b></p>
-                                                <p class="mb-2">Create a grid layout with <b>4 columns</b>, each being <b>100px wide</b></p>
-                                                <pre class='snippet snippetPadding overflow-scroll'><code>
-grid-template-columns: 100px 100px 100px 100px;
-                                                </code></pre>
-                                            </div>
-                                            <div class="exContainer-headline">
-                                                <p><b>2. Example</b></p>
-                                                <p class="mb-2">Make a grid layout containing <b>3 columns</b>, where 2 columns are <b>100px wide</b> and one is <b>200px wide</b></p>
-                                                <pre class='snippet snippetPadding overflow-scroll'><code>
-grid-template-columns: 100px 100px 200px;
-                                                </code></pre>
-                                            </div>
-                                            <div class="exContainer-headline">
-                                                <p><b>3. Example</b></p>
-                                                <p class="mb-2">Make a grid layout containing <b>4 columns</b>, all with the same width</p>
-                                                <pre class='snippet snippetPadding overflow-scroll'><code>
-grid-template-columns: auto auto auto auto;
-                                                </code></pre>
-                                            </div>
-                                            <div>
-                                                <p>
-                                                    *The value <code class='inlineCode'>auto</code> makes all columns have the same width;<br>
-                                                    * If the number of items exceeds the number of columns, the grid will automatically add a new row to put the items in.
-                                                </p>
+                                <p>The Grid is made up of <b>2 elements</b>:</p>
+                                <ul class="px-3">
+                                    <li class="my-2">The <span class='red-cream'>Parent Element</span></li>
+                                    <li class="my-2">The <span class='red-cream'>Child Elements</span> , made up of one or multiple elements</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- GRID COLUMNS -->
+                        <div class='borderline'>
+                            <h1 class='headline' id="gridColumns"><span class="backdrop">Grid <span class="red-cream">Columns</span></span></h1>
+                            <div class='my-3 px-md-3 px-1'>
+                                <p class="my-2">Columns represent the <b>Vertical Lines</b> of the grid items</p>
+                                <img src="img/gridColumns.jpg" alt="Grid Columns" class="leftImage img100 img-sm-80 img-md-60 br-25">
+                            </div>
+                        </div>
+                        <!-- GRID ROWS -->
+                        <div class='borderline'>
+                            <h1 class='headline' id="gridRows"><span class="backdrop">Grid <span class="red-cream">Rows</span></span></h1>
+                            <div class='my-3 px-md-3 px-1'>
+                                <p class="my-2">Rows represent the <b>Horizontal Lines</b> of the grid items</p>
+                                <img src="img/gridRows.jpg" alt="Grid Rows" class="leftImage img100 img-sm-80 img-md-60 br-25">
+                            </div>
+                        </div>
+                        <!-- GRID PROPERTIES -->
+                        <div class='borderline'>
+                            <h1 class='headline' id='gridProperties'><span class='backdrop'>Grid <span class='red-cream'>Properties</span></span></h1>
+                            <div class='contentPadding'>
+                                <div class='chapter'>
+                                    <h2 class='chapter-title'><span class='backdrop'>The Essential Properties</span></h2>
+                                    <div class='my-3 px-md-3 px-1'>
+                                        <div class='subchapter'>
+                                            <h3 class="subchapter-title"><span class='backdrop'><code class="inlineCode">display</code></span></h3>
+                                            <div class='px-md-3 px-1'>
+                                                <p class="my-2">This property is extremely important</p>
+                                                <p class="my-2">It is responsible for <b>turning an HTML element</b> into a <span class='red-cream'>Grid Container</span></p>
+                                                <p class="my-2">When dealing with <b>CSS Grid</b>, we can use either:</p>
+                                                <ul class="pl-3">
+                                                    <li class="my-1"><code class='inlineCode'>display: grid</code> or</li>
+                                                    <li class="my-1"><code class='inlineCode'>display: inline-grid</code></li>
+                                                    <!-- use examples -->
+                                                </ul>
+                                                <p class="my-2">All <b>direct children</b> of the grid container automatically become <span class='red-cream'>Grid Items</span>.</p>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class='subchapter'>
-                                        <h3 class='subchapter-title'><code class='inlineCode'>grid-template-rows</code></h3>
-                                        <div class='px-md-4'>
-                                            <p class="mt-2">This property is used to:</p>
-                                            <ul class="pl-3">
-                                                <li>Define the <b>Height of each row</b></li>
-                                            </ul>
-                                            <div class="exContainer-headline">
-                                                <p><b>Example:</b></p>
-                                                <p class="mb-2">Make a grid layout with 2 rows, each one having a with a height of 100px</p>
-                                                <pre class='snippet snippetPadding overflow-scroll'><code>
-grid-template-rows: 100px 100px;
-                                                </code></pre>
+                                        <div class='subchapter'>
+                                            <h3 class="subchapter-title"><span class='backdrop'><code class="inlineCode">grid-template-columns</code></span></h3>
+                                            <div class='px-md-3 px-1'>
+                                                <p class="mt-2">This property is used to define:</p>
+                                                <ul class="pl-3 mb-1">
+                                                    <li>The <b>number of columns</b></li>
+                                                    <li>The <b>width</b> of each column</li>
+                                                </ul>
+                                                <div class="example-container-subchapter">
+                                                    <p><b>1. Example</b></p>
+                                                    <p class="mb-2">Create a grid layout with <b>4 columns</b>, each being <b>100px wide</b></p>
+                                                    <pre class='snippet'><code>
+        grid-template-columns: 100px 100px 100px 100px;
+                                                    </code></pre>
+                                                </div>
+                                                <br>
+                                                <div class="example-container-subchapter">
+                                                    <p><b>2. Example</b></p>
+                                                    <p class="mb-2">Make a grid layout containing <b>3 columns</b>, where 2 columns are <b>100px wide</b> and one is <b>200px wide</b></p>
+                                                    <pre class='snippet'><code>
+        grid-template-columns: 100px 100px 200px;
+                                                    </code></pre>
+                                                </div>
+                                                <br>
+                                                <div class="example-container-subchapter">
+                                                    <p><b>3. Example</b></p>
+                                                    <p class="mb-2">Make a grid layout containing <b>4 columns</b>, all with the same width</p>
+                                                    <pre class='snippet'><code>
+        grid-template-columns: auto auto auto auto;
+                                                    </code></pre>
+                                                </div>
+                                                <div>
+                                                    <p>
+                                                        *The value <code class='inlineCode'>auto</code> makes all columns have the same width;<br>
+                                                        * If the number of items exceeds the number of columns, the grid will automatically add a new row to put the items in.
+                                                    </p>
+                                                </div>
                                             </div>
-                                            <div class="alert alert-danger" role="alert">
-                                                <p>
-                                                    *If the number of items is greater than the amount of rows, a new row will be created, even if it was not defined in the property
-                                                </p>
+                                        </div>
+                                        <div class='subchapter'>
+                                            <h3 class="subchapter-title"><span class='backdrop'><code class="inlineCode">grid-template-rows</code></span></h3>
+                                            <div class='px-md-3 px-1'>
+                                                <p class="mt-2">This property is used to:</p>
+                                                <ul class="pl-3">
+                                                    <li>Define the <b>Height of each row</b></li>
+                                                </ul>
+                                                <div class="example-container-subchapte">
+                                                    <p><b>Example:</b></p>
+                                                    <p class="mb-2">Make a grid layout with 2 rows, each one having a with a height of 100px</p>
+                                                    <pre class='snippet'>
+                                                        <code>
+        grid-template-rows: 100px 100px;
+                                                        </code>
+                                                    </pre>
+                                                </div>
+                                                <div class="alert alert-danger" role="alert">
+                                                    <p>
+                                                        *If the number of items is greater than the amount of rows, a new row will be created, even if it was not defined in the property
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='chapter'>
+                                    <h2 class='chapter-title'><span class='backdrop'>The Styling Properties</span></h2>
+                                    <div class='my-3 px-md-3 px-1'>
+                                        <div class='subchapter'>
+                                            <h3 class="subchapter-title"><span class='backdrop'><code class="inlineCode">justify-content</code></span></h3>
+                                            <div class='px-md-3 px-1'>
+                                                <p class="my-2">This property is used to horizontally align all the grid items inside of the container</p>
+                                                <p class="my-2">To do this, it needs to alter the distance between the columns of the grid</p>
+                                                <p>Basically, the justify-content property:</p>
+                                                <ul class="pl-3">
+                                                    <li>Handles the horizontal leftover space that exists inside the container</li>
+                                                    <li>Makes the grid items occupy the space in some specific way that we wan</li>
+                                                </ul>
+                                                <p class="my-2">The premise is: there needs to be horizontal leftover space inside the container</p>
+                                                <p class="my-2">To fulfill this premise, the total width of grid items must be smaller than the container itself, otherwise there is no free space availabe and the property won't work</p>
+                                                <p>Values Accepted:</p>
+                                                <ul class="pl-3">
+                                                    <li class="my-2"><code class='inlineCode'>justify-content: space-evenly</code> 	→ will give the columns equal amount of space between, and around them</li>
+                                                    <li class="my-2"><code class='inlineCode'>justify-content: space-around</code> 	→ will give the columns equal amount of space around them</li>
+                                                    <li class="my-2"><code class='inlineCode'>justify-content: space-between</code> 	→ will give the columns equal amount of space between them</li>
+                                                    <li class="my-2"><code class='inlineCode'>justify-content: center</code>	→ will align the grid in the middle of the container</li>
+                                                    <li class="my-2"><code class='inlineCode'>justify-content: start</code>		→ will align the grid at the beginning of the container</li>
+                                                    <li class="my-2"><code class='inlineCode'>justify-content: end</code>		→ will align the grid at the end of the container</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class='subchapter'>
+                                            <h3 class="subchapter-title"><span class='backdrop'><code class="inlineCode">align-content</code></span></h3>
+                                            <div class='px-md-3 px-1'>
+                                                <p class="my-2">This property is used to <b>Vertically align</b> all the grid items inside of the container</p>
+                                                <p class="my-2">To do this, it needs to alter the distance between the rows of the grid</p>
+                                                <p class="mt-2">Basically, the align-content property:</p>
+                                                <ul class="pl-3">
+                                                    <li>Handles the vertical leftover space that exists inside the container</li>
+                                                    <li>Makes the grid items occupy the space in some specific way that we want</li>
+                                                </ul>
+                                                <p class="my-2">The premise is: there needs to be vertical leftover space inside the container</p>
+                                                <p class="my-2">To fulfill this premise, the total height of grid items must be smaller than the container itself, otherwise there is no free space availabe and the property won't work</p>
+                                                <p class="mt-2">Values Accepted:</p>
+                                                <ul class="pl-3">
+                                                    <li class="my-2"><code class='inlineCode'>align-content: space-evenly</code> 	→ will give the rows equal amount of space between, and around them</li>
+                                                    <li class="my-2"><code class='inlineCode'>align-content: space-around</code> 	→ will give the rows equal amount of space around them</li>
+                                                    <li class="my-2"><code class='inlineCode'>align-content: space-between</code> 	→ will give the rows equal amount of space between them</li>
+                                                    <li class="my-2"><code class='inlineCode'>align-content: center</code>	→ will align the rows at the beginning of the container</li>
+                                                    <li class="my-2"><code class='inlineCode'>align-content: start</code>		→ will align the grid at the beginning of the container</li>
+                                                    <li class="my-2"><code class='inlineCode'>align-content: end</code>		→ will align the rows at the end of the container</li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class='chapter'>
-                                <h2 class='chapter-title'><span class='backdrop'><span class='fw-100'>The</span> Styling <span class='fw-100'>Properties</span></span></h2>
-                                <div class=''>
-                                    <div class='subchapter'>
-                                        <h3 class='subchapter-title'><code class='inlineCode'>justify-content</code></h3>
-                                        <div class='px-md-4'>
-                                            <p class="my-2">This property is used to horizontally align all the grid items inside of the container</p>
-                                            <p class="my-2">To do this, it needs to alter the distance between the columns of the grid</p>
-                                            <p>Basically, the justify-content property:</p>
-                                            <ul class="pl-3">
-                                                <li>Handles the horizontal leftover space that exists inside the container</li>
-                                                <li>Makes the grid items occupy the space in some specific way that we wan</li>
-                                            </ul>
-                                            <p class="my-2">The premise is: there needs to be horizontal leftover space inside the container</p>
-                                            <p class="my-2">To fulfill this premise, the total width of grid items must be smaller than the container itself, otherwise there is no free space availabe and the property won't work</p>
-                                            <p>Values Accepted:</p>
-                                            <ul class="pl-3">
-                                                <li class="my-2"><code class='inlineCode'>justify-content: space-evenly</code> 	→ will give the columns equal amount of space between, and around them</li>
-                                                <li class="my-2"><code class='inlineCode'>justify-content: space-around</code> 	→ will give the columns equal amount of space around them</li>
-                                                <li class="my-2"><code class='inlineCode'>justify-content: space-between</code> 	→ will give the columns equal amount of space between them</li>
-                                                <li class="my-2"><code class='inlineCode'>justify-content: center</code>	→ will align the grid in the middle of the container</li>
-                                                <li class="my-2"><code class='inlineCode'>justify-content: start</code>		→ will align the grid at the beginning of the container</li>
-                                                <li class="my-2"><code class='inlineCode'>justify-content: end</code>		→ will align the grid at the end of the container</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class='subchapter'>
-                                        <h3 class='subchapter-title'><code class='inlineCode'>align-content</code></h3>
-                                        <div class='px-md-4'>
-                                            <p class="my-2">This property is used to <b>Vertically align</b> all the grid items inside of the container</p>
-                                            <p class="my-2">To do this, it needs to alter the distance between the rows of the grid</p>
-                                            <p class="mt-2">Basically, the align-content property:</p>
-                                            <ul class="pl-3">
-                                                <li>Handles the vertical leftover space that exists inside the container</li>
-                                                <li>Makes the grid items occupy the space in some specific way that we want</li>
-                                            </ul>
-                                            <p class="my-2">The premise is: there needs to be vertical leftover space inside the container</p>
-                                            <p class="my-2">To fulfill this premise, the total height of grid items must be smaller than the container itself, otherwise there is no free space availabe and the property won't work</p>
-                                            <p class="mt-2">Values Accepted:</p>
-                                            <ul class="pl-3">
-                                                <li class="my-2"><code class='inlineCode'>align-content: space-evenly</code> 	→ will give the rows equal amount of space between, and around them</li>
-                                                <li class="my-2"><code class='inlineCode'>align-content: space-around</code> 	→ will give the rows equal amount of space around them</li>
-                                                <li class="my-2"><code class='inlineCode'>align-content: space-between</code> 	→ will give the rows equal amount of space between them</li>
-                                                <li class="my-2"><code class='inlineCode'>align-content: center</code>	→ will align the rows at the beginning of the container</li>
-                                                <li class="my-2"><code class='inlineCode'>align-content: start</code>		→ will align the grid at the beginning of the container</li>
-                                                <li class="my-2"><code class='inlineCode'>align-content: end</code>		→ will align the rows at the end of the container</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-                    </div>
-                    <!-- GRID GAPS -->
-                    <div class='bd-content'>
-                        <h1 id="gridGaps" class='headline'><span class="backdrop">Grid <span class='gold'>Gaps</span></span></h1>
-                        <div class='contentPadding'>
+                        <!-- GRID GAPS -->
+                        <div class='borderline'>
+                            <h1 class='headline' id="gridGaps"><span class="backdrop">Grid <span class='red-cream'>Gaps</span></span></h1>
                             <p class="mt-3">Gaps are the <b>Spaces between</b> each <b>column</b> and between each <b>row</b><br></p>
-                            <p>
-                                We can change the size of our Grid Gaps<br>
-                                We have special properties just for this: <!-- one example for each -->
-                            </p>
+                            <p>We can change the size of our Grid Gaps</p>
+                            <p>We have special properties just for this:</p>
+                            <!-- one example for each -->
                             <br>
-                            <ul>
-                                <li>
-                                    <code class='inlineCode'>grid-column-gap</code>
-                                    <p class="px-4 mt-2">Responsible for changing the gaps between columns</p>
-                                </li>
-                                <img src="img/columnGap.jpg" alt="Grid Column Gap" class="leftImage img-md-70 img100 br-25 mt-2 mb-5">
-                                <li>
-                                    <code class='inlineCode'>grid-row-gap</code>
-                                    <p class="px-4 mt-2">Responsible for changing the gaps between rows</p>
-                                </li>
-                                <img src="img/rowGap.jpg" alt="Grid Row Gap" class="leftImage img-md-70 img100 br-25 mt-2 mb-5">
-                                <li>
-                                    <code class='inlineCode'>grid-gap</code>
-                                    <p class="px-4 mt-2">Shorthand property for both columns and rows</p>
-                                </li>
-                            </ul>
+                            <div class='subchapter'>
+                                <h3 class="subchapter-title"><span class='backdrop'><code class="inlineCode">grid-column-gap</code></span></h3>
+                                <p class="px-4 mt-2">Responsible for changing the gaps between columns</p>
+                                <img src="img/columnGap.jpg" alt="Grid Column Gap" class="leftImage img-sm-60 img-md-70 img90 br-25 mt-2 mb-5">
+                            </div>
+                            <div class='subchapter'>
+                                <h3 class="subchapter-title"><span class='backdrop'><code class="inlineCode">grid-row-gap</code></span></h3>
+                                <p class="px-4 mt-2">Responsible for changing the gaps between rows</p>
+                                <img src="img/rowGap.jpg" alt="Grid Row Gap" class="leftImage img-sm-60 img-md-70 img90 br-25 mt-2 mb-5">
+                            </div>
+                            <div class='subchapter'>
+                                <h3 class="subchapter-title"><span class='backdrop'><code class="inlineCode">grid-gap</code></span></h3>
+                                <p class="px-4 mt-2">Shorthand property for both columns and rows</p>
+                            </div>
                         </div>
-                    </div>
-                    <!-- GRID LINES -->
-                    <div class='bd-content'>
-                        <h1 id="gridLines" class='headline'><span class="backdrop">Grid <span class='gold'>Lines</span></span></h1>
-                        <div class='contentPadding'>
-                            <p class="mt-3">Grid Lines are extremely important<br></p>
+                        <!-- GRID LINES -->
+                        <div class='borderline'>
+                            <h1 id="gridLines" class='headline'><span class="backdrop">Grid <span class='red-cream'>Lines</span></span></h1>
+                            <p class="mt-3">Grid Lines are extremely important</p>
                             <p>They are located <b>between</b> Grid Items and are used as a <b>reference</b></p>
-                            <p>
-                                By default, Grid Items will only fill one line and one row<br>
-                                With the help of Grid Lines we can define them to span multiple columns and rows<br>
-                            </p>
+                            <p>By default, Grid Items will only fill one line and one row</p>
+                            <p>With the help of Grid Lines we can define them to span multiple columns and rows</p>
                             <p>In short, <b>Grid Lines help us to define the amount of columns and rows that a certain Grid Item will occupy.</b></p>
                             <p>There are 2 types of Grid Lines:</p>
                             <div class="chapter">
                                 <h2 class="chapter-title"><span class="backdrop">Column Lines</span></h2>
                                 <div class="px-md-3">
-                                    <p>Represent the lines between columns</p>
-                                    <img src="img/columnLines.jpg" alt="Column Lines" class="leftImage img-md-90 img100 br-25">
+                                    <p>Theses lines are the ones between the columns of the grid.</p>
+                                    <img src="img/columnLines.jpg" alt="Column Lines" class="leftImage img-md-80 img90 br-25">
                                 </div>
                             </div>
                             <div class="chapter">
                                 <h2 class="chapter-title"><span class="backdrop">Row Lines</span></h2>
                                 <div class="px-md-3">
-                                    <p>Represent the lines between rows</p>
-                                    <img src="img/rowLines.jpg" alt="Column Lines" class="leftImage img-md-90 img100 br-25">
+                                    <p>Theses lines are the ones between the rows of the grid.</p>
+                                    <img src="img/rowLines.jpg" alt="Column Lines" class="leftImage img-md-80 img100 br-25">
                                 </div>
                             </div>
                             <div class="chapter">
-                                <h2 class="chapter-title"><span class="backdrop">Grid Lines Properties</span></h2>
+                                <h2 class="chapter-title"><span class="backdrop">Grid Lines <span class="red-cream">Properties</span></span></h2>
                                 <div class="px-md-4">
-                                    <p>We have 7 properties directly correlated with Grid Lines:</p>
+                                    <p>There are 7 properties directly correlated with Grid Lines:</p>
                                     <div class="subchapter">
                                         <div class="subchapter-title"><span class="backdrop"><code class='inlineCode'>grid-column-start</code></span></div>
                                         <div class="px-3 mt-2">
                                             <p>Determines the column from where the Grid Item will start</p>
-                                            <div class="exContainer">
-                                                <pre class="snippet snippetPadding overflow-scroll">
+                                            <div class="example-container-subchapter">
+                                                <pre class="snippet pl-4">
                                                     <code>
 Ex: grid-column-start: 1;
                                                     </code>
@@ -267,8 +278,8 @@ Ex: grid-column-start: 1;
                                         <div class="subchapter-title"><span class="backdrop"><code class='inlineCode'>grid-column-end</code></span></div>
                                         <div class="px-3 mt-2">
                                             <p>Determines the column where the Grid Item will end</p>
-                                            <div class="exContainer">
-                                                <pre class="snippet snippetPadding overflow-scroll">
+                                            <div class="example-container-subchapter">
+                                                <pre class="snippet pl-4">
                                                     <code>
 Ex: grid-column-end: 5;
                                                     </code>
@@ -279,9 +290,9 @@ Ex: grid-column-end: 5;
                                     <div class="subchapter">
                                         <div class="subchapter-title"><span class="backdrop"><code class='inlineCode'>grid-column</code></span></div>
                                         <div class="px-3 mt-2">
-                                            <p>Shorthand property, defines at which column the item will start and where it will end.</p>
-                                            <div class="exContainer">
-                                                <pre class="snippet snippetPadding overflow-scroll">
+                                            <p>Shorthand property, defines at which column the item will start in which column it will end.</p>
+                                            <div class="example-container-subchapter">
+                                                <pre class="snippet pl-4">
                                                     <code>
 Ex: grid-column: 1 / 5;   	/* Will span from line 1 to line 5 */
 Ex: grid-column: 1 / span 3; 	/* Will span 3 lines starting from line 1*/
@@ -306,8 +317,8 @@ Ex: grid-column: 1 / span 3; 	/* Will span 3 lines starting from line 1*/
                                         <div class="subchapter-title"><span class="backdrop"><code class='inlineCode'>grid-row</code></span></div>
                                         <div class="px-3 mt-2">
                                             <p>Shorthand property, defines at which row the item will start and where it will end.</p>
-                                            <div class="exContainer">
-                                                <pre class="snippet snippetPadding overflow-scroll">
+                                            <div class="example-container-subchapter">
+                                                <pre class="snippet pl-4">
                                                     <code>
 Ex: grid-row: 1 / 5;   	/* Will span from line 1 to line 4 */
 Ex: grid-row: 1 / span 3; 	/* Will span 2 lines starting from line 1*/
@@ -320,8 +331,8 @@ Ex: grid-row: 1 / span 3; 	/* Will span 2 lines starting from line 1*/
                                         <div class="subchapter-title"><span class="backdrop"><code class='inlineCode'>grid-area</code></span></div>
                                         <div class="px-3 mt-2">
                                             <p>Shorthand property for all of them</p>
-                                            <div class="exContainer">
-                                                <pre class="snippet snippetPadding overflow-scroll">
+                                            <div class="example-container-subchapter">
+                                                <pre class="snippet pl-4">
                                                     <code>
 Ex: grid-area: 1 / 2 / 5 / 6;   		/* Will go from row-line 1 to row-line 5 and from column-line 2 to column line 6:
 Ex: grid-area: 2 / 1 / span 2 / span 3; 	/* Will span 2 rows from row-line 2 and span 3 columns from column-line 1;
@@ -333,55 +344,52 @@ Ex: grid-area: 2 / 1 / span 2 / span 3; 	/* Will span 2 rows from row-line 2 and
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- FLEXBOX VS GRID -->
-                    <div class='bd-content'>
-                        <h1 id="flexVSgrid" class='headline'><span class="backdrop">Flexbox vs Grid</span></h1>
-                        <div class='contentPadding'>
-                            <p>                            
-                                Flexbox is just a way to layout certain items using one dimension, horizontally, so that they are flexible and able to change their size dinamically based on the content inside of the flexbox container
-
-                                Grid is exactly the same, in the sense that it allows you to layout items flexibly inside of the container, but the difference is that the CSS Grid allows you to work using 2 dimensions, vertical and horizontal
-                                    Grid by itself doesn't define any rows or columns
-                                    By default it will look exactly the same
-                            </p>
-                            <div class="">
-                                <p>Flexbox and grid were designed so they would work amazingly together, and using flexbox items inside of your grid containers is one of the best ways to lay out a site</p>
-                            </div>
+                        <!-- FLEXBOX VS GRID -->
+                        <div class='borderline'>
+                            <h1 class='headline' id="flexVSgrid"><span class="backdrop">Flexbox vs Grid</span></h1>
+                            <p>Flexbox is just a tool that was created to help us to <b>layout items flexibily</b></p>
+                            <p>To do this, Flexbox uses <b>one dimension</b>, horizontally.</p>
+                            <p>This way the items will be flexible and able to change their size dinamically, based on the content inside of the flexbox container</p>
+                            <br>
+                            <p>Grid is exactly the same, in the sense that it allows us to <b>layout items flexibly</b> inside of the container
+                            <p>The difference lies in the fact that the Grid allows us to work vertically and horizontally, using <b>2 dimensions</b>.</p>
+                            <p>Grid by itself doesn't define any rows or columns</p>
+                            <p>By default things will be looking exactly the same</p>
+                            <br>
+                            <p>Flexbox and grid were designed so they would work amazingly together, and using flexbox items inside of your grid containers is one of the best ways to lay out a site</p>
                         </div>
-                    </div>
-                    <!-- GRID TEMPLATE -->
-                    <div class="bd-content">
-                        <h1 id="webpageTemplate" class="headline"><span class="backdrop">Making a Webpage template</span></h1>
-                        <div class="contentPadding">
+                        <!-- GRID TEMPLATE -->
+                        <div class="borderline">
+                            <h1 class="headline" id="webpageTemplate"><span class="backdrop">Making a Webpage template</span></h1>
+                        
                             <p>One of the main goals of the CSS Grid is allow us to create <b>webpage templates</b></p>
                             <p>Learning how to create templates will allow you to make much <b>better looking</b> and <b>better organized</b> webpages.</p>
                             <div class="chapter">
                                 <h2 class="chapter-title"><span class="backdrop">Properties for your template</span></h2>
-                                <div class="">
+                                <div class="my-3 px-md-3 px-1">
                                     <p>Before creating our templates, we will need to learn some new properties:</p>
                                     <div class="subchapter">
                                         <h3 class="subchapter-title"><span class="backdrop"><code class='inlineCode'>grid-area</code></span></h3>
-                                        <div class="px-md-4">
+                                        <div class="px-md-3 px-1">
                                             <p>We have already covered this property but now we will explain another one of its uses</p>
                                             <p>It can also be used to <b>assign names to Grid Items</b></p>
                                             <p>This fact is extremely important, as the layout of our grid will behave accordingly with the names our Grid Items have received</p>
-                                            <div class="exContainer-headline">
+                                            <div class="example-container-subchapter">
                                                 <p><b>Example:</b></p>
                                                 <p>Assign the name <code class='inlineCode'>myArea</code> to elements with class <code class='inlineCode'>item1</code></p>
-                                                <pre class="snippet snippetPadding overflow-scroll">
+                                                <pre class="snippet">
                                                     <code>
 <span class='weak'>&#60styles&#62</span>
-    .item1 {
-        grid-area: myArea;
-    }
+.item1 {
+    grid-area: myArea;
+}
 <span class='weak'>&#60/styles&#62
 &#60body&#62
-    &#60div&#62
-        &#60div </span>class="item1"<span class='weak'>&#62 1 &#60/div&#62
-        &#60div class="item2"&#62 2 &#60/div&#62
-        &#60div class="item3"&#62 3 &#60/div&#62
-    &#60/div&#62
+&#60div&#62
+    &#60div </span>class="item1"<span class='weak'>&#62 1 &#60/div&#62
+    &#60div class="item2"&#62 2 &#60/div&#62
+    &#60div class="item3"&#62 3 &#60/div&#62
+&#60/div&#62
 &#60/body&#62</span>
                                                     </code>
                                                 </pre>
@@ -390,7 +398,7 @@ Ex: grid-area: 2 / 1 / span 2 / span 3; 	/* Will span 2 rows from row-line 2 and
                                     </div>
                                     <div class="subchapter">
                                         <h3 class="subchapter-title"><span class="backdrop"><code class='inlineCode'>grid-template-areas</code></span></h3>
-                                        <div class="px-md-4">
+                                        <div class="px-md-3 px-1">
                                             <p>This property is similar to the last one and this is because both work hand in hand.</p>
                                             <p>It allows us to <b>use the Grid Items that we previously named</b> using the <code class="inlineCode">grid-area</code> property</p>
                                             <p>Now, thse named Grid Items will be used to help in <b>designing our Grid Template</b></p>
@@ -403,68 +411,68 @@ Ex: grid-area: 2 / 1 / span 2 / span 3; 	/* Will span 2 rows from row-line 2 and
                                             <p>With this property we will define <b>each row</b> and <b>each column</b> of our grid</p>
                                             <p>We will be filling these 2 dimensions inside of the <code class="inlineCode">grid-template-areas</code> property</p>
                                             <p>To help us achieve our goal, this property has a simple sintax we will learn.</b>
-                                            <div class="exContainer-headline">
+                                            <div class="example-container-subchapter">
                                                 <p><b>Example</b></p>
                                                 <p><b>Step 1:</b></p>
                                                 <p>Create a parent div, with a class <code class='inlineCode'>grid container</code>, containing 5 child divs, which will be the Grid Items</p>
-                                                <pre class="snippet snippetPadding overflow-scroll">
+                                                <pre class="snippet">
                                                     <code>
 <span class="weak">&#60!-- HTML --&#62</span>
 
 &#60div class="grid-container"&#62
-    <span class="weak">&#60div class="item1"&#62Header&#60/div&#62
-    &#60div class="item2"&#62Menu&#60/div&#62
-    &#60div class="item3"&#62Main&#60/div&#62  
-    &#60div class="item4"&#62Right&#60/div&#62
-    &#60div class="item5"&#62Footer&#60/div&#62</span>
+<span class="weak">&#60div class="item1"&#62Header&#60/div&#62
+&#60div class="item2"&#62Menu&#60/div&#62
+&#60div class="item3"&#62Main&#60/div&#62  
+&#60div class="item4"&#62Right&#60/div&#62
+&#60div class="item5"&#62Footer&#60/div&#62</span>
 &#60/div&#62
                                                     </code>
                                                 </pre>
-                                                <hr>
+                                                <br>
                                                 <p><b>Step 2:</b></p>
                                                 <p>Give a <b>unique value</b> to each one of our <b>Grid Items</b> using the <code class="inlineCode">grid-area</code> property</p>
-                                                <pre class="snippet snippetPadding overflow-scroll">
+                                                <pre class="snippet">
                                                     <code>
-<span class="weak">/* CSS */
-
-.item1 {</span>
+    <span class="weak">/* CSS */
+    
+    .item1 {</span>
     grid-area: header;
-<span class="weak">}
-.item2 {</span>
+    <span class="weak">}
+    .item2 {</span>
     grid-area: menu;<span class="weak">
-}
-.item3 {</span>
+    }
+    .item3 {</span>
     grid-area: main;<span class="weak">
-}
-.item4 {</span>
+    }
+    .item4 {</span>
     grid-area: right;<span class="weak">
-}
-.item5 {</span>
+    }
+    .item5 {</span>
     grid-area: footer;<span class="weak">
-}
+    }
                                                     </code>
                                                 </pre>
-                                                <hr>
+                                                <br>
                                                 <p><b>Step 3:</b></p>
                                                 <p>Now we will attribute the necessary properties to our <b>Container Class</b></p>
-                                                <pre class="snippet snippetPadding overflow-scroll">
+                                                <pre class="snippet">
                                                     <code>
-<span class="weak">/* CSS */</span>
-
-.grid-container {
+    <span class="weak">/* CSS */</span>
+    
+    .grid-container {
     <span class="weak">background-color: #2196F3;
     padding: 10px;</span>
     display: grid;
     grid-gap: 10px;
     grid-template-areas: <span class="weak">/* This one we will be learn step by step */</span>
-}
-                                                   </code>
+    }
+                                                    </code>
                                                 </pre>
-                                                <hr>
+                                                <br>
                                                 <p class="mb-2"><b>Learning to Use <code class="inlineCode">grid-template-areas</code></b></p>
                                                 <div class="px-3">
                                                     <p class="mb-2">This property has a sintax we need to learn:</p>
-                                                    <ol class="innerUl">
+                                                    <ol>
                                                         <li>The sintax starts in the <b>first Row</b>, from <b>left to right</b></li>
                                                         <li><b>Rows</b> are be represented by apostrophes <code class="inlineCode"><b>''</b></code></li>
                                                         <li>Here is where the <b>Grid Items</b> we named will be useful</li>
@@ -477,16 +485,16 @@ Ex: grid-area: 2 / 1 / span 2 / span 3; 	/* Will span 2 rows from row-line 2 and
                                                     </ol>
                                                     <hr>
                                                     <p><b>1º Row:</b></p>
-                                                    <pre class="snippet snippetPadding overflow-scroll">
+                                                    <pre class="snippet">
                                                         <code>
 <span class="weak">.grid-container {
-    </span>grid-template-areas:
-        <span class="bold">'header header header header header header'</span>
-        <span class="weak">/* Continue reading... */
+</span>grid-template-areas:
+    <span class="bold">'header header header header header header'</span>
+    <span class="weak">/* Continue reading... */
 }</span>
                                                         </code>
                                                     </pre>
-                                                    <ol class="innerUl">
+                                                    <ol>
                                                         <li>Notice we used <code class="inlineCode"><b>''</b></code>, meaning that this is the <b>first row</b></li>
                                                         <li><code class="inlineCode">header</code> is the name we gave to one of our Grid Items</li>
                                                         <li>Inside the first row, we wrote <code class="inlineCode">header</code> <b>6 times</b>, meaning our Grid will have <b>6 Columns</b></li>
@@ -494,17 +502,17 @@ Ex: grid-area: 2 / 1 / span 2 / span 3; 	/* Will span 2 rows from row-line 2 and
                                                     </ol>
                                                     <br>
                                                     <p><b>2º Row:</b></p>
-                                                    <pre class="snippet snippetPadding overflow-scroll">
+                                                    <pre class="snippet">
                                                         <code>
-<span class="weak">.grid-container {
+    <span class="weak">.grid-container {
     </span>grid-template-areas:
         <span class="bold">'header header header header header header'
         'menu main main main right right'</span>
         <span class="weak">/* Continue reading... */
-}</span>
+    }</span>
                                                         </code>
                                                     </pre>
-                                                    <ol class="innerUl">
+                                                    <ol>
                                                         <li>Now we have <b>changed rows</b>! We are now inside the second row.</li>
                                                         <li>Again, inside of this new row, we wrote 6 names</li>
                                                         <li><code class="inlineCode">menu</code> will span only one column</li>
@@ -514,17 +522,17 @@ Ex: grid-area: 2 / 1 / span 2 / span 3; 	/* Will span 2 rows from row-line 2 and
                                                     </ol>
                                                     <br>
                                                     <p><b>3º Row:</b></p>
-                                                    <pre class="snippet snippetPadding overflow-scroll">
+                                                    <pre class="snippet">
                                                         <code>
-<span class="weak">.grid-container {
+    <span class="weak">.grid-container {
     </span>grid-template-areas:
         <span class="bold">'header header header header header header'
         'menu main main main right right'
         'menu footer footer footer footer footer';</span>
-}</span>
+    }</span>
                                                         </code>
                                                     </pre>
-                                                    <ol class="innerUl">
+                                                    <ol>
                                                         <li>Using <code class="inlineCode"><b>''</b></code> for the last time, we define our Grid Layout to have a total of 3 rows</li>
                                                         <li>Again we need to write 6 names</li>
                                                         <li><code class="inlineCode">menu</code> will span one column</li>
@@ -533,7 +541,7 @@ Ex: grid-area: 2 / 1 / span 2 / span 3; 	/* Will span 2 rows from row-line 2 and
                                                     </ol>
                                                     <hr>
                                                     <p><b>End Result:</b></p>
-                                                    <ol class="innerUl">
+                                                    <ol>
                                                         <li>This is our End Result!</li>
                                                         <li>Remembering about the 2 dimensions grids have, pay special attention to the <code class="inlineCode">menu</code> item</li>
                                                         <li>This item was written 2 times, but instead of spanning 2 columns, it is spanning 2 rows.</li>
@@ -545,13 +553,13 @@ Ex: grid-area: 2 / 1 / span 2 / span 3; 	/* Will span 2 rows from row-line 2 and
                                                         <p>As we've seen, the names given to our Grid Items will define the Layout of our Grid.</p>
                                                         <p>But when there is no name for one of our Grid Items, we can use <b>periods <code class="inlineCode">.</code></b> instead</p>
                                                         <p>Example:</p>
-                                                        <pre class="snippet snippetPadding overflow-scroll">
+                                                        <pre class="snippet">
                                                             <code>
 <span class="weak">.grid-container {
-    </span>grid-template-areas:
-        <span class="bold">'header header header header header header'
-        'menu . . . right right'
-        'menu footer footer footer footer footer';</span>
+</span>grid-template-areas:
+    <span class="bold">'header header header header header header'
+    'menu . . . right right'
+    'menu footer footer footer footer footer';</span>
 }</span>
                                                             </code>
                                                         </pre>
@@ -564,22 +572,8 @@ Ex: grid-area: 2 / 1 / span 2 / span 3; 	/* Will span 2 rows from row-line 2 and
                             </div>
                         </div>
                     </div>
-                </main>
-            </div>
-            <div class="container-sidebar">
-                <div class="navbar">
-                    <ul class="navbar-ul">
-                        <li><a href="#gridElements"><p>Grid Elements</p></a></li>
-                        <li><a href="#gridColumns">Grid Columns</a></li>
-                        <li><a href="#gridRows">Grid Rows</a></li>
-                        <li><a href="#gridProperties">Grid Properties</a></li>
-                        <li><a href="#gridGaps">Grid Gaps</a></li>
-                        <li><a href="#gridLines">Grid Lines</a></li>
-                        <li><a href="#flexVSgrid">Flex vs CSS</a></li>
-                        <li><a href="#webpageTemplate">Webpage Template</a></li>
-                    </ul>
                 </div>
-            </div>
+            </main>
         </div>
     </body>
 </html>
