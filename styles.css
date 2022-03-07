@@ -373,14 +373,14 @@ li p, li b {
 .leftImage {
     display:        block;
 }
-.rightImage {
-    display:        block;
-    margin-left:    auto;
-    margin-right:   0;
-}
 .centeredImage {
     display:        block;
     margin-left:    auto;
     margin-right:   auto;
+}
+.rightImage {
+    display:        block;
+    margin-left:    auto;
+    margin-right:   0;
 }
 
